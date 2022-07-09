@@ -38,7 +38,6 @@ def getUidByUsername(username):
                + "&hot_search=0" \
                + "&search_source=discover"
     response = awemeRequest(endpoint, type="post").json()
-    print(response)
 
     for userObj in response.get("user_list"):
         userInfo = userObj.get("user_info")
